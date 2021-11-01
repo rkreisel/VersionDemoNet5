@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>.test</name>
+    </assembly>
+    <members>
+        <member name="T:VersionAPI.test.Libs.MsTestLogger`1">
+            <summary>
+            MsTestLogger<typeparamref name="T"/> for ILogger
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:VersionAPI.test.Libs.MsTestLogger`1.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)">
+            <summary>
+            CTOR
+            </summary>
+            <param name="testContext">TestContext</param>
+        </member>
+        <member name="M:VersionAPI.test.Libs.MsTestLogger`1.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})">
+            <summary>
+            Log
+            </summary>
+            <typeparam name="TState"></typeparam>
+            <param name="logLevel">LogLevel</param>
+            <param name="eventId">EventId</param>
+            <param name="state">TState</param>
+            <param name="exception">Exception</param>
+            <param name="formatter">Func</param>
+        </member>
+        <member name="M:VersionAPI.test.Libs.MsTestLogger`1.IsEnabled(Microsoft.Extensions.Logging.LogLevel)">
+            <summary>
+            Is Enanbled
+            </summary>
+            <param name="logLevel">(ignored)</param>
+            <returns>True</returns>
+        </member>
+        <member name="M:VersionAPI.test.Libs.MsTestLogger`1.BeginScope``1(``0)">
+            <summary>
+            Begin Scope
+            </summary>
+            <typeparam name="TState"></typeparam>
+            <param name="state">TState</param>
+            <returns>this</returns>
+        </member>
+        <member name="M:VersionAPI.test.Libs.MsTestLogger`1.Dispose">
+            <summary>
+            Dispose: Placeholder
+            </summary>
+        </member>
+        <member name="T:VersionAPI.test.Libs.SerializationHelper">
+            <summary>
+            https://gist.githubusercontent.com/BlitzkriegSoftware/6fab86323ede3a424281c8a8e339c606/raw/1e737ad9457fbebc2725929ee8dbe25bbb865751/SerializationHelper.cs
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.Libs.SerializationHelper.AssertSerialization``1(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext,``0)">
+            <summary>
+            Tests that a model serializes correctly
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="thing1">Instance of T to test</param>
+            <param name="testContext">XUnit Test Output</param>
+        </member>
+        <member name="T:VersionAPI.test.TestControllers">
+            <summary>
+            Test: Controllers
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.TestControllers.SetUpTests(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)">
+            <summary>
+            Test: Setup
+            </summary>
+            <param name="testContext"></param>
+        </member>
+        <member name="M:VersionAPI.test.TestControllers.Test_Ctrl_Common_VersionGet">
+            <summary>
+            Common: Version
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.TestControllers.Test_Ctrl_Common_VersionDetailsGet">
+            <summary>
+            Common: Version Details
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.TestControllers.Test_Ctrl_Common_HealthCheckGet">
+            <summary>
+            Common: Health Check
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.TestControllers.Test_Ctrl_DummyV1_DummyGet">
+            <summary>
+            DummyV1: Get
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.TestControllers.Test_Ctrl_DummyV1_DummyPost">
+            <summary>
+            DummyV1: Post
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.TestControllers.Test_Ctrl_DummyV2_DummyGet">
+            <summary>
+            DummyV2: Get
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.TestControllers.Test_Ctrl_DummyV2_DummyPost">
+            <summary>
+            DummyV2: Post
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.TestControllers.Test_Ctrl_DummyV2_DummyList">
+            <summary>
+            DummyV2: List
+            </summary>
+        </member>
+        <member name="T:VersionAPI.test.UnitTestLibs">
+            <summary>
+            Unit Tests: Library
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.UnitTestLibs.SetUpTests(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)">
+            <summary>
+            Test: Setup
+            </summary>
+            <param name="testContext"></param>
+        </member>
+        <member name="M:VersionAPI.test.UnitTestLibs.Test_Libs_AssembyInfoHelper">
+            <summary>
+            Libs.AssemblyInfoHelper
+            </summary>
+        </member>
+        <member name="T:VersionAPI.test.UnitTestModels">
+            <summary>
+            Tests: Model Serialization
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.UnitTestModels.SetUpTests(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)">
+            <summary>
+            Test: Setup
+            </summary>
+            <param name="testContext"></param>
+        </member>
+        <member name="M:VersionAPI.test.UnitTestModels.Test_Serialization_AssemblyInfoMetadata">
+            <summary>
+            Serialization: AssemblyVersionMetadata
+            </summary>
+        </member>
+        <member name="M:VersionAPI.test.UnitTestModels.Test_Serialization_ErrorPayload">
+            <summary>
+            Serialization: ErrorPayload
+            </summary>
+        </member>
+    </members>
+</doc>

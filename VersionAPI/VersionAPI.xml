@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VersionAPI</name>
+    </assembly>
+    <members>
+        <member name="T:VersionAPI.Controllers.CommonController">
+            <summary>
+            Semantic Version
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Controllers.CommonController.#ctor(Microsoft.Extensions.Logging.ILogger{VersionAPI.Controllers.CommonController})">
+            <summary>
+            Initializes a new instance of the <see cref="T:VersionAPI.Controllers.CommonController"/> class.
+            CTOR
+            </summary>
+            <param name="logger">ILogger</param>
+        </member>
+        <member name="M:VersionAPI.Controllers.CommonController.VersionGet">
+            <summary>
+            Get Version
+            </summary>
+            <returns>Version String</returns>
+        </member>
+        <member name="M:VersionAPI.Controllers.CommonController.VersionDetailsGet">
+            <summary>
+            Get Version (long form)
+            </summary>
+            <returns>Version String</returns>
+        </member>
+        <member name="M:VersionAPI.Controllers.CommonController.CheckHealth">
+            <summary>
+            Health Check
+            </summary>
+            <returns>HealthCheckResult</returns>
+        </member>
+        <member name="T:VersionAPI.Controllers.DummyControllerV1">
+            <summary>
+            V1 Dummy
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Controllers.DummyControllerV1.#ctor(Microsoft.Extensions.Logging.ILogger{VersionAPI.Controllers.DummyControllerV1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:VersionAPI.Controllers.DummyControllerV1"/> class.
+            CTOR
+            </summary>
+            <param name="logger">ILogger (injected)</param>
+        </member>
+        <member name="M:VersionAPI.Controllers.DummyControllerV1.DummyGet">
+            <summary>
+            Get Dummy
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:VersionAPI.Controllers.DummyControllerV1.DummyPost(System.String)">
+            <summary>
+            Echo
+            </summary>
+            <param name="text">Text to echo</param>
+            <returns>Echo of text</returns>
+        </member>
+        <member name="T:VersionAPI.Controllers.DummyControllerV2">
+            <summary>
+            Dummy V2
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Controllers.DummyControllerV2.#ctor(Microsoft.Extensions.Logging.ILogger{VersionAPI.Controllers.DummyControllerV2})">
+            <summary>
+            Initializes a new instance of the <see cref="T:VersionAPI.Controllers.DummyControllerV2"/> class.
+            CTOR
+            </summary>
+            <param name="logger">ILogger</param>
+        </member>
+        <member name="M:VersionAPI.Controllers.DummyControllerV2.DummyGet">
+            <summary>
+            Get Dummy
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:VersionAPI.Controllers.DummyControllerV2.DummyList">
+            <summary>
+            Dummy List
+            </summary>
+            <returns>List of string</returns>
+        </member>
+        <member name="M:VersionAPI.Controllers.DummyControllerV2.DummyPost(System.String)">
+            <summary>
+            Echo
+            </summary>
+            <param name="text">Text to echo</param>
+            <returns>Echo of text</returns>
+        </member>
+        <member name="T:VersionAPI.Libs.AssembyInfoHelper">
+            <summary>
+            Helper: Assembly Info
+            <para>Translates the <c>CustomAttributeData</c> to a usable string value</para>
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Libs.AssembyInfoHelper.TryParse(System.Reflection.CustomAttributeData,System.String@)">
+            <summary>
+            Try Parse a <c>System.Reflection.CustomAttributeData</c> into a string
+            </summary>
+            <param name="attribute">(this)</param>
+            <param name="s">Strng to parse into</param>
+            <returns>True if success</returns>
+        </member>
+        <member name="T:VersionAPI.Libs.GlobalExceptionFilter">
+            <summary>
+            Global Exception Filter
+            <para>See: www.talkingdotnet.com/global-exception-handling-in-aspnet-core-webapi/</para>
+            </summary>
+        </member>
+        <member name="F:VersionAPI.Libs.GlobalExceptionFilter._logger">
+            <summary>
+            Field: ILogger
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Libs.GlobalExceptionFilter.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VersionAPI.Libs.GlobalExceptionFilter"/> class.
+            CTOR
+            </summary>
+            <param name="logger">Logger to inject</param>
+        </member>
+        <member name="M:VersionAPI.Libs.GlobalExceptionFilter.Dispose">
+            <summary>
+            Public implementation of Dispose pattern callable by consumers.
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Libs.GlobalExceptionFilter.Dispose(System.Boolean)">
+            <summary>
+            Protected implementation of Dispose pattern.
+            </summary>
+            <param name="disposing">bool</param>
+        </member>
+        <member name="M:VersionAPI.Libs.GlobalExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            Handle Exception
+            </summary>
+            <param name="context">ExceptionContext</param>
+        </member>
+        <member name="T:VersionAPI.Libs.TypeSwitch">
+            <summary>
+            Provides for switching on type (handy for error handling)
+            <para>From: http://stackoverflow.com/questions/11277036/typeswitching-in-c-sharp</para>
+            </summary>
+        </member>
+        <member name="T:VersionAPI.Libs.TypeSwitch.CaseInfo">
+            <summary>
+            Case Info
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Libs.TypeSwitch.CaseInfo.IsDefault">
+            <summary>
+            Gets or sets a value indicating whether is Default Case
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Libs.TypeSwitch.CaseInfo.Target">
+            <summary>
+            Gets or sets type to switch on
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Libs.TypeSwitch.CaseInfo.Action">
+            <summary>
+            Gets or sets thing to do if this case selected
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Libs.TypeSwitch.Do(System.Object,VersionAPI.Libs.TypeSwitch.CaseInfo[])">
+            <summary>
+            Do the action
+            </summary>
+            <param name="source">Source of the action</param>
+            <param name="cases">Cases</param>
+        </member>
+        <member name="M:VersionAPI.Libs.TypeSwitch.Case``1(System.Action)">
+            <summary>
+            Case Block
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="action">Action</param>
+            <returns>Case Information</returns>
+        </member>
+        <member name="M:VersionAPI.Libs.TypeSwitch.Case``1(System.Action{``0})">
+            <summary>
+            Case Block (Generic)
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="action">Action</param>
+            <returns>Case Information</returns>
+        </member>
+        <member name="M:VersionAPI.Libs.TypeSwitch.Default(System.Action)">
+            <summary>
+            Default Case Block
+            </summary>
+            <param name="action">Action</param>
+            <returns>Case Information</returns>
+        </member>
+        <member name="T:VersionAPI.Models.AssemblyVersionMetadata">
+            <summary>
+            Model: Assembly Version Metadata
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.Copyright">
+            <summary>
+            Gets or sets copyright
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.Company">
+            <summary>
+            Gets or sets company
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.Description">
+            <summary>
+            Gets or sets description
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.SemanticVersion">
+            <summary>
+            Gets or sets semantic Version <para>See: semver.org</para>
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.InformationVersion">
+            <summary>
+            Gets or sets Program Version <c>PI.Sprint.Patch</c>
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.MajorVersion">
+            <summary>
+            Gets major version as it occurs on the path
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.Product">
+            <summary>
+            Gets or sets product
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.ReleaseNotesUrl">
+            <summary>
+            Put the URL to your release notes here
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.TeamName">
+            <summary>
+            Team Name (replace this!)
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.AssemblyVersionMetadata.TeamEMail">
+            <summary>
+            TeamEmail (replace this!)
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Models.AssemblyVersionMetadata.PropertySet(System.String,System.String)">
+            <summary>
+            Property Set
+            </summary>
+            <param name="name">name</param>
+            <param name="value">value</param>
+        </member>
+        <member name="M:VersionAPI.Models.AssemblyVersionMetadata.ToString">
+            <summary>
+            Formatted String
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VersionAPI.Models.ErrorPayload">
+            <summary>
+            Error Payload
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.ErrorPayload.StatusCode">
+            <summary>
+            Gets or sets hTTP Status Code
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.ErrorPayload.Message">
+            <summary>
+            Gets or sets message
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.ErrorPayload.StackTrace">
+            <summary>
+            Gets or sets stack Trace
+            </summary>
+        </member>
+        <member name="P:VersionAPI.Models.ErrorPayload.Data">
+            <summary>
+            Gets or sets additional Data
+            </summary>
+        </member>
+        <member name="T:VersionAPI.Program">
+            <summary>
+            Program Start
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Program.Main(System.String[])">
+            <summary>
+            Entry Point
+            </summary>
+            <param name="args">Command Line Arguments</param>
+        </member>
+        <member name="M:VersionAPI.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Host builder
+            </summary>
+            <param name="args">Command Line Arguments</param>
+            <returns>IHostBuilder</returns>
+        </member>
+        <member name="P:VersionAPI.Program.ProgramMetadata">
+            <summary>
+            Gets semantic Version, etc from Assembly Metadata
+            </summary>
+        </member>
+        <member name="T:VersionAPI.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="F:VersionAPI.Startup.CommonVersion">
+            <summary>
+            Common
+            </summary>
+        </member>
+        <member name="F:VersionAPI.Startup.MajorVersionNew">
+            <summary>
+            New
+            </summary>
+        </member>
+        <member name="F:VersionAPI.Startup.MajorVersionCurrent">
+            <summary>
+            Current
+            </summary>
+        </member>
+        <member name="F:VersionAPI.Startup.ApiDemoName">
+            <summary>
+            API Controller Root-Name
+            </summary>
+        </member>
+        <member name="M:VersionAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VersionAPI.Startup"/> class.
+            CTOR
+            </summary>
+            <param name="configuration">IConfiguration</param>
+        </member>
+        <member name="P:VersionAPI.Startup.Configuration">
+            <summary>
+            Gets property
+            </summary>
+            <value>IConfiguration</value>
+        </member>
+        <member name="M:VersionAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">IServiceCollection</param>
+        </member>
+        <member name="M:VersionAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILogger{VersionAPI.Startup})">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">IApplicationBuilder</param>
+            <param name="env">IWebHostEnvironment</param>
+            <param name="logger"></param>
+        </member>
+    </members>
+</doc>

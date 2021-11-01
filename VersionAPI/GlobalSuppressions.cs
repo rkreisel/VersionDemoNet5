@@ -1,0 +1,1 @@
+﻿[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1124:Do not use regions", Justification = "Regions are educational", Scope = "type", Target = "~T:VersionAPI.Program")]
